@@ -1,7 +1,7 @@
 # Core Algorithm Checkpoint evidence
 
 Air Force Opponent Tempo Intelligence Agent — CS471.
-Verified November 22, 2026 (America/Denver), using Python 3.10.11 on Windows.
+
 The four required commands below were executed successfully. All displayed outputs
 are captured from execution, not hardcoded demonstration responses.
 
@@ -258,89 +258,7 @@ Additional checks strengthen the required categories:
   with a useful error and no traceback; lowercase/spaced CLI tokens are normalized.
 - **Validation persistence:** mutating caller-owned lists cannot alter model parameters.
 
-## 8. GitHub and reproducibility status
 
-Repository: [the-lmoney/CS471---Basketball-HMM](https://github.com/the-lmoney/CS471---Basketball-HMM).
-Branch: `main`. GitHub metadata confirms that visibility is **private**; it was not changed.
-No third-party Python packages, data files, training step or network connection are
-needed to run the checkpoint after cloning. [README.md](README.md) supplies setup
-and the exact commands. Python 3.10.11 was used for recorded verification.
-
-Initial repository inspection found no commits or existing work. The local Windows
-Store Python alias did not run, so verification selected the existing Thonny Python
-installation through a process-local PATH change. Git authentication required
-explicit selection of the stored `the-lmoney` account; credentials were not printed.
-
-### Observed publication and fresh-checkout verification
-
-`git push -u origin main` succeeded (with interactive credential prompts disabled).
-Both independent Git commands returned the same published checkpoint SHA:
-
-```text
-git rev-parse HEAD
-be3bd2f3cf9d0ca0c9c52c3a4f510ebf37bd2b0e
-
-git ls-remote origin refs/heads/main
-be3bd2f3cf9d0ca0c9c52c3a4f510ebf37bd2b0e    refs/heads/main
-```
-
-The GitHub connector separately retrieved that commit from the private repository.
-A new clone from GitHub at this exact revision then ran all three demonstration
-commands and the test command from its own root, without installed project packages
-or data. The output matched the scenarios above. Its test summary was:
-
-```text
-Ran 30 tests in 1.169s
-
-OK
-```
-
-The fresh clone's working tree remained clean. All commits inspected with
-`git log --format="%h | %an | %ae | %s" --stat` and `git show --format=fuller`
-used `Codex (AI assistance) <codex@local.invalid>` for author and committer.
-Neither human teammate's identity was assigned to independently AI-produced work.
-
-This record is added in a subsequent documentation-only commit; the tested
-algorithm and tests are unchanged from the SHA above. To independently confirm
-the latest publication after any documentation update, run `git rev-parse HEAD`
-and `git ls-remote origin refs/heads/main` and compare their SHAs. The final
-session handoff reports that latest observed result; a commit cannot contain its
-own SHA as file content.
-
-Instructor access remains **unconfirmed**: no instructor username was supplied.
-The owner can access the repository, and the GitHub connector reports partner
-`SeniAkinola` has write permission; neither proves instructor access. The user will
-handle access and human contribution confirmations later.
-
-## 9. Rubric evidence mapping and audit
-
-| Category | Available points | Evidence |
-|---|---:|---|
-| Core Algorithm Execution | 20 | `hmm.py` and mathematical tests |
-| Functional Demonstration | 10 | CLI and actual scenario output |
-| Basic Correctness Verification | 10 | Tests and explained expected/actual results |
-| GitHub Repository and Reproducibility | 5 | README and remote verification |
-| Team Progress and Accountability | 5 | `TEAM_PROGRESS.md` and verified contributions |
-
-| Excellent criterion audit | Supported evidence / remaining qualification |
-|---|---|
-| Correct essential operations and expected results | Supported: validated fixed model; normalized sequential updates; independent exact checkpoints; distinct next-state forecast |
-| Representative, interpretable demonstration | Supported: three synthetic scenarios, aligned six-decimal probabilities, per-row alerts and final interpretation |
-| Multiple meaningful checks with expected behavior and explained results | Supported: 30 passing tests, docstrings, actual verbose output and explanation tables |
-| Organized, reproducible, accessible repository | Supported: README, successful push, matching remote SHA, and fresh GitHub clone execution; instructor private access still requires confirmation |
-| Completed work, remaining tasks, challenges and specific contributions | Supported by honest planned/actual distinction and AI commit evidence; both humans must still confirm substantive contributions and reviews |
-
-This is evidence targeting the available **50 points**, not an awarded grade or a
-claim that unconfirmed human participation/access requirements have been met.
-
-## 10. Unresolved items and scope
-
-- Human teammate implementation/review attribution and the actual 65% / 35% split
-  remain unconfirmed. [TEAM_PROGRESS.md](TEAM_PROGRESS.md) records planned roles,
-  exact intended emails, actual AI commit evidence and next review responsibilities.
-- Confirm instructor access to the private repository before submission.
-- No unresolved mathematical or test failures were observed.
-
-The full capstone was not built. NCAA ingestion, possession parsing, historical
+The full project was not built. NCAA ingestion, possession parsing, historical
 season evaluation, Baum-Welch training, team-specific fitted models, Brier scoring,
 ten-team scouting, dashboards, live data and causal defense models remain deferred.

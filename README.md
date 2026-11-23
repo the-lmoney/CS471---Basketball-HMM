@@ -249,18 +249,9 @@ CS471---Basketball-HMM/
     └── test_hmm.py       # Mathematical, validation, and CLI checks
 ```
 
-## Team accountability and AI assistance
 
-The intended responsibility allocation is approximately **65% for `the-lmoney`**
-(algorithm and integration) and **35% for `SeniAkinola`** (verification and
-documentation). These are planned responsibilities, not measured completed work.
-Codex generated the implementation, tests, and documentation with independent AI
-review. Human authorship, contribution, and review must be confirmed separately;
-AI agent activity does not establish either teammate's contribution. See
-[TEAM_PROGRESS.md](TEAM_PROGRESS.md) for specific assignments, verified evidence,
-commit attribution, discrepancies, and remaining reviews.
 
-## Limitations and future capstone work
+## Limitations and future work
 
 The fixed parameters are illustrative assumptions. No team-specific parameters
 have been learned, no predictive performance on real games has been measured,
@@ -277,6 +268,5 @@ Future capstone development remains deferred:
 
 This checkpoint includes no historical-data ingestion, Parquet or SportsDataverse
 integration, live data, web dashboard, causal press-defense model, or additional
-AI algorithm. Remaining checkpoint obligations, including human contribution
-confirmation and instructor access, are tracked separately in
+AI algorithm. Remaining checkpoints are tracked separately in
 [TEAM_PROGRESS.md](TEAM_PROGRESS.md).
