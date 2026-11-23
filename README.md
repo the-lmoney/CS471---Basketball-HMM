@@ -24,8 +24,17 @@ Verified: **30 tests passed, 0 failed**. First QUICK gives FAST = 6/7 and next Q
 
 ## Document work here
 
-**the-lmoney (HMM/CLI):** [completed work, files/commits, review]. **SeniAkinola (verification/docs):** [completed work, files/commits, review]. Completed checkpoint: fixed HMM, demonstrations, tests. **Challenges and resolutions:** [fill in]. **Remaining checkpoint work and next responsibilities:** [fill in; confirm instructor access]. Future work: historical data, possession parsing, model training, Brier-score evaluation, and ten-team reports.
+**the-lmoney (HMM/CLI):** HMM: Defined FAST/CONTROLLED states and QUICK/NORMAL/LONG observations using the approved fixed probabilities; validated dimensions, ranges, and probability sums.
+Filtering: Updated state beliefs after each observation, normalized them, and applied transitions only between observations.
+Forecasting: Applied one additional transition, then combined QUICK emission probabilities to predict the next possession. 
+
+**SeniAkinola (verification/docs):** Alerts: Compared forecasts against the model-implied 0.35 reference: HIGH at ≥0.45, LOW at ≤0.25, otherwise NEAR BASELINE.
+CLI: Added team/sequence arguments, readable probability tables, synthetic-data labels, final interpretations, and clear input errors.
+
+**Challenges:** The main challenges were updating the model’s probabilities in the correct order, checking our calculations against independently calculated answers, handling invalid inputs without crashing, and making sure rounding did not cause incorrect alerts near the cutoff values.
+
+ **Remaining checkpoint work and next responsibilities:** To complete our final project, we still need to move beyond the basic Hidden Markov Model (HMM) demonstration and implement it using real basketball data. This includes collecting and cleaning historical possession data for all ten Mountain West teams, training the HMM to recognize different offensive tempos, and testing how accurately it predicts the next possession. We also need to compare our predictions against each team's average pace using Brier scores to measure accuracy. Finally, we plan to create clear scouting reports that show each team's tempo patterns, predictions, and useful insights for Air Force coaches.
 
 ## AI assistance
 
-Codex generated the HMM, validation, filtering, forecasting, alerts, CLI, and 30 tests; independently checked numerical expectations; executed demonstrations and tests, including a fresh-checkout check; drafted and consolidated documentation; resolved local Python/Git setup issues; committed and pushed changes; and opened VS Code. The current human edits were preserved in Git history before consolidation. Record each teammate's actual work and review above. The full project, training, and historical-data features remain deferred.
+Both Lucas and Seni collabored on this project for both design and implementation. We heavily leveraged Codex as well to assist us throughout the project. We would explain the conceptuals of what we needed and Codex would build out the implementation of our ideas. We also leveraged Codex for assistance with the ReadMe file, unit testing, and more.
