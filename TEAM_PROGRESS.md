@@ -46,10 +46,10 @@ uses the stored `the-lmoney` account; that does not change who authored a commit
 |---|---|---|---|---|
 | Codex AI agents | Fixed model validation, filtering, next-possession forecast, alerts and CLI | `tempo_scout/hmm.py`: `DiscreteHMM`; `scouting.py`: `classify_alert`; `__main__.py`: `main`, `parse_sequence`; package and ignore files | `76eed662e7e7aedbc88b8277be372b784018bd87` | Three actual demonstrations; independently derived rational checks; AI code review |
 | Codex AI test agent | 30 correctness, validation, alert and CLI tests | `tests/test_hmm.py` | `38eac57c415733237f6f66c17a3291d40fe2e17f` | All 30 pass, zero failures/errors; each test explains its expected outcome |
-| Codex AI agents | Reproducibility instructions, actual execution evidence and this accountability record | `README.md`, `CHECKPOINT_EVIDENCE.md`, `TEAM_PROGRESS.md` | The documentation commits containing these files; inspect with commands below | Cross-checked against captured runs and Git history; human review remains pending |
+| Codex AI agents | Reproducibility instructions, actual execution evidence and this accountability record | `README.md`, `CHECKPOINT_EVIDENCE.md`, `TEAM_PROGRESS.md` | `be3bd2f3cf9d0ca0c9c52c3a4f510ebf37bd2b0e`; later publication-record commit resolvable with the commands below | Cross-checked against captured runs, Git history and a fresh GitHub clone; human review remains pending |
 
-Documentation cannot embed the SHA of the same commit that contains it. The two
-implementation SHAs above are immutable references; documentation history can be
+Documentation cannot embed the SHA of the same commit that contains it. The
+SHAs above are immutable references; subsequent documentation history can be
 resolved without a self-referential placeholder:
 
 ```bash
@@ -88,7 +88,7 @@ from section A and describe their actual changes or reviews.
 | Automated verification | Complete; 30 tests pass, including episode reset, invalid input and impossible evidence |
 | README | Complete; clone/setup/run/test instructions and captured output |
 | Evidence report | Complete; actual runs, expected/actual mathematics and rubric mapping |
-| GitHub publishing | Pending final push and SHA verification; see publication record in `CHECKPOINT_EVIDENCE.md` |
+| GitHub publishing | Complete; `main` pushed, remote SHA matched and fresh GitHub clone passed all commands; see publication record in `CHECKPOINT_EVIDENCE.md` |
 
 ## F. Remaining work
 
@@ -99,7 +99,6 @@ from section A and describe their actual changes or reviews.
 - Confirm actual human contribution allocation; the user will update this later.
 - Confirm that the instructor can read the private repository. No instructor
   GitHub identity was supplied; access is not established by owner/partner access.
-- Complete final publication verification and update its record.
 - No unresolved algorithm or automated-test failures were found in this session.
 
 ### Future capstone development (outside this checkpoint)

@@ -126,8 +126,9 @@ Advisory model estimate only; this is not a historical team rate or causal claim
 ## 5. Expected versus actual mathematical results
 
 Expected fractions were independently derived by an AI reviewer, separate from
-implementation, and are asserted in the tests. This is not a claim of human
-teammate review. With FAST posterior `p`, the next FAST prior is `q = 1/5+3p/5`;
+implementation. The required mixed-sequence checkpoints and contrasting final
+values are asserted in the tests. This is not a claim of human teammate review.
+With FAST posterior `p`, the next FAST prior is `q = 1/5+3p/5`;
 QUICK updates to `6q/(1+5q)`, LONG to `q/(6-5q)`, and NORMAL leaves `q` unchanged.
 The next-QUICK probability simplifies independently to `1/5+3p/10`.
 
@@ -270,8 +271,41 @@ Store Python alias did not run, so verification selected the existing Thonny Pyt
 installation through a process-local PATH change. Git authentication required
 explicit selection of the stored `the-lmoney` account; credentials were not printed.
 
-Publication verification is pending the final documentation commit, fresh-checkout
-execution and push. This paragraph will be updated with the observed result.
+### Observed publication and fresh-checkout verification
+
+`git push -u origin main` succeeded (with interactive credential prompts disabled).
+Both independent Git commands returned the same published checkpoint SHA:
+
+```text
+git rev-parse HEAD
+be3bd2f3cf9d0ca0c9c52c3a4f510ebf37bd2b0e
+
+git ls-remote origin refs/heads/main
+be3bd2f3cf9d0ca0c9c52c3a4f510ebf37bd2b0e    refs/heads/main
+```
+
+The GitHub connector separately retrieved that commit from the private repository.
+A new clone from GitHub at this exact revision then ran all three demonstration
+commands and the test command from its own root, without installed project packages
+or data. The output matched the scenarios above. Its test summary was:
+
+```text
+Ran 30 tests in 1.169s
+
+OK
+```
+
+The fresh clone's working tree remained clean. All commits inspected with
+`git log --format="%h | %an | %ae | %s" --stat` and `git show --format=fuller`
+used `Codex (AI assistance) <codex@local.invalid>` for author and committer.
+Neither human teammate's identity was assigned to independently AI-produced work.
+
+This record is added in a subsequent documentation-only commit; the tested
+algorithm and tests are unchanged from the SHA above. To independently confirm
+the latest publication after any documentation update, run `git rev-parse HEAD`
+and `git ls-remote origin refs/heads/main` and compare their SHAs. The final
+session handoff reports that latest observed result; a commit cannot contain its
+own SHA as file content.
 
 Instructor access remains **unconfirmed**: no instructor username was supplied.
 The owner can access the repository, and the GitHub connector reports partner
@@ -293,7 +327,7 @@ handle access and human contribution confirmations later.
 | Correct essential operations and expected results | Supported: validated fixed model; normalized sequential updates; independent exact checkpoints; distinct next-state forecast |
 | Representative, interpretable demonstration | Supported: three synthetic scenarios, aligned six-decimal probabilities, per-row alerts and final interpretation |
 | Multiple meaningful checks with expected behavior and explained results | Supported: 30 passing tests, docstrings, actual verbose output and explanation tables |
-| Organized, reproducible, accessible repository | README and local runs supported; fresh-checkout/push verification pending below; instructor private access still requires confirmation |
+| Organized, reproducible, accessible repository | Supported: README, successful push, matching remote SHA, and fresh GitHub clone execution; instructor private access still requires confirmation |
 | Completed work, remaining tasks, challenges and specific contributions | Supported by honest planned/actual distinction and AI commit evidence; both humans must still confirm substantive contributions and reviews |
 
 This is evidence targeting the available **50 points**, not an awarded grade or a
@@ -301,7 +335,6 @@ claim that unconfirmed human participation/access requirements have been met.
 
 ## 10. Unresolved items and scope
 
-- Complete and record final publishing/fresh-checkout verification.
 - Human teammate implementation/review attribution and the actual 65% / 35% split
   remain unconfirmed. [TEAM_PROGRESS.md](TEAM_PROGRESS.md) records planned roles,
   exact intended emails, actual AI commit evidence and next review responsibilities.
